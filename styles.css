@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    background: #1a1a1a;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+.veil-container {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.toolbar {
+    display: flex;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid #00ffcc;
+}
+.btn {
+    background: #333;
+    border: none;
+    color: #00ffcc;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px #00ffcc;
+}
+#urlBar {
+    flex-grow: 1;
+    padding: 10px;
+    background: #222;
+    border: 2px solid #00ffcc;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+#urlBar:focus {
+    box-shadow: 0 0 20px #00ffcc;
+    outline: none;
+}
+.veil-btn {
+    background: #00ffcc;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+.tabs {
+    display: flex;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+}
+.tab {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background: #333;
+    color: #00ffcc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    transform-style: preserve-3d;
+}
+.tab:hover {
+    transform: translateY(-5px) rotateX(10deg);
+    box-shadow: 0 5px 15px #00ffcc;
+}
+.tab.active {
+    background: #00ffcc;
+    color: #1a1a1a;
+}
+.tab .close {
+    margin-left: 10px;
+    color: #ff5555;
+}
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    color: white;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.9);
+}
+.suggestions {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    color: #00ffcc;
+}
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
